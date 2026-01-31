@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar style */
+
+nav {
+  width: 100%;
+  background: white;
+  padding: 42px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.logo {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  font-size: 2.25em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-family: "JetBrains Mono", monospace;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: black;
+}
+
+.nav-links li a.active {
+  background-color: black;
+  color: white;
+}
+
+.nav-links li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.search-n-bag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-container {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  color: #707072;
+  width: 260px;
+  height: 46px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-container img {
+  width: 28px;
+  height: auto;
+}
+
+.text-field {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+}
+
+.menu input:focus {
+  outline: none;
+}
+
+.cart-btn {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.cart-btn:hover {
+  background: #f5f5f5;
+}
+
+.cart-btn-icon {
+  width: 38px;
+  height: auto;
+}
+
+/* filter section style */
+
+.brand-filter-section {
+  background: #f5f5f5;
+  padding: 16px 340px;
+}
+
+.brand-filter-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.brand-filter-links li a {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.brand-filter-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 4px;
+  background: black;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.brand-filter-links a.active::after {
+  width: 100%;
+}
+
+.brand-filter-links li a img {
+  width: 60px;
+}
+
+/* offers */
+
+.offers {
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 60px;
+}
+
+.offers-price {
+  background-color: black;
+  color: white;
+  outline: 4px solid black;
+  outline-style: dotted;
+  border-radius: 20px;
+  position: relative;
+  left: 200px;
+  top: 80px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.left-content img {
+  width: 340px;
+  height: 340px;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-n-bag-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+/* shoe style display */
+
+.shoe-style-display {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  padding: 60px;
+}
+
+.shoe-style-display h1 {
+  font-weight: 500;
+}
+
+.picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+.picture img {
+  width: 436px;
+  height: 600;
+  transition: transform 0.3s;
+}
+
+.picture img:hover {
+  transform: scale(1.1);
+}
+
+/* supported by */
+
+.supported-by {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  font-family: "Poppins", sans-serif;
+  padding: 60px;
+}
+
+.supported-by h1 {
+  font-weight: 500;
+}
+
+.selling-points {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.content {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.content img {
+  width: 56px;
+  height: 56px;
+}
+
+.content p {
+  text-align: center;
+}
+
+/* footer style */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  padding: 32px 52px;
+}
+
+.footer-top-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.sneakcommerce {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  max-width: 28%;
+}
+
+.sneakcommerce h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+.sneakcommerce p {
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.social img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.social img:hover{
+  transform: scale(1.2);
+}
+
+.footer-top-content h3 {
+  color: white;
+  font-weight: 600;
+}
+
+.footer-top-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-top-content li a {
+  color: #707074;
+  text-decoration: none;
+}
+
+.footer-top-content li a:hover {
+  color: white;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-n-support {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.line {
+  border-radius: 20px;
+  background-color: #707074;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #707074;
+}
+
+/* hamburger */
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
