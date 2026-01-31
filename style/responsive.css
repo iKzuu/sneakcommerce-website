@@ -80,6 +80,10 @@
 
   /* item style */
 
+  .items-grid {
+    padding: 0 20px;
+  }
+
   .shoes-grid {
     display: grid;
     grid-template-columns: repeat(
