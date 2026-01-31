@@ -82,7 +82,10 @@
 
   .shoes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(
+      2,
+      1fr
+    );
     gap: 12px;
   }
 
@@ -209,5 +212,124 @@
 
   .size-n-bag-btn {
     gap: 6px;
+  }
+
+  /* elegance on every side */
+
+  .shoe-style-display {
+    padding: 20px;
+  }
+
+  .shoe-style-display h1 {
+    font-size: 1.5em;
+  }
+
+  .picture {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    );
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .picture img {
+    width: 160px;
+    height: 220px;
+  }
+
+  .picture img:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* point of selling */
+
+  .supported-by {
+    padding: 20px;
+  }
+
+  .supported-by h1 {
+    font-size: 1.5em;
+  }
+
+  .selling-points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    padding: 20px;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .content img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .content p {
+    font-size: small;
+  }
+
+  /* footer */
+
+  footer {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .footer-top-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-top-content .sneakcommerce {
+    grid-column: 1 / -1 ;
+    justify-self: center;
+  }
+
+  .sneakcommerce {
+    max-width: 100%;
+  }
+
+  .sneakcommerce h1 {
+    font-size: medium;
+  }
+
+  .sneakcommerce p {
+    font-size: smaller;
+  }
+
+  .social {
+    gap: 10px;
+  }
+
+  .social img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-top-content h3 {
+    font-size: medium;
+  }
+
+  .footer-top-content li a {
+    font-size: small;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright p {
+    font-size: smaller;
   }
 }

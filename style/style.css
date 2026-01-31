@@ -225,7 +225,7 @@ nav {
 
 .picture img {
   width: 436px;
-  height: 600;
+  height: 600px;
   transition: transform 0.3s;
 }
 
@@ -336,6 +336,7 @@ footer {
 .footer-top-content ul {
   display: flex;
   flex-direction: column;
+  list-style: none;
   gap: 14px;
 }
 
@@ -375,6 +376,7 @@ footer {
 .footer-bottom-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 30px;
 }
 
