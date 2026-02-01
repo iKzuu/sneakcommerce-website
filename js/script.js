@@ -66,3 +66,32 @@ const menu = document.querySelector(".menu");
 hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
+
+// cart function logic
+addToCart = (shoe, size) => {
+    if (!size) {
+        alert("Pilih ukuran dulu le 😔");
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(
+        item => item.id === shoe.id && item.size === size
+    );
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            id: shoe.id,
+            name: shoe.name,
+            price: shoe.price,
+            image: shoe.image,
+            size: size,
+            qty: 1,
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+}

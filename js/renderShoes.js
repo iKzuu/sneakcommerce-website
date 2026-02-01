@@ -4,6 +4,7 @@ function renderShoes(data) {
     container.innerHTML = "";
     
     data.forEach(shoe => {
+        let selectedSize = null;
         const item = document.createElement("div");
         item.classList.add("item");
 
@@ -24,16 +25,29 @@ function renderShoes(data) {
 
                 <div class="size-bag">
                     <div class="size">
-                        ${shoe.sizes.map(size => `<button>${size}</button>`).join("")}
+                        ${shoe.sizes.map(size => `<button class="size-btn">${size}</button>`).join("")}
                     </div>
 
-                    <button class="bag">
+                    <button class="bag" data-id="${shoe.id}">
                         <img src="assets/icons/white-bag.svg" alt="bag">
                     </button>
                 </div>
             </div>
 
         `;
+
+        const sizeButton = item.querySelectorAll(".size-btn");
+        sizeButton.forEach(btn => {
+            btn.addEventListener("click", () => {
+                sizeButton.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                selectedSize = btn.innerHTML;
+            });
+        });
+
+        item.querySelector(".bag").addEventListener("click",() => {
+            addToCart(shoe, selectedSize);
+        });
 
         container.appendChild(item);
     });
