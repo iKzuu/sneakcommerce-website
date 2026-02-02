@@ -5,6 +5,11 @@
     min-height: 1000px;
 }
 
+#cart-items .empty-cart-text {
+    font-family: "Poppins", sans-serif;
+    margin: 0 20px;
+}
+
 .cart-heading {
     margin: 20px;
     font-family: "Poppins", sans-serif;
@@ -29,22 +34,30 @@
     background-color: #d4d4d4;
 }
 
+.cart-item input[type="checkbox"] {
+    accent-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+
 .cart-item img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .name-to-qty {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
 .name-n-size {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: left;
 }
 
@@ -59,7 +72,6 @@
 
 .price-qty {
     width: 100%;
-    border: 1px solid orange;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,7 +80,7 @@
 }
 
 .price-qty h4 {
-    font-size: small;
+    font-size: 0.7em;
 }
 
 .qty-deleteBtn {
@@ -78,18 +90,37 @@
     align-items: center;
 }
 
+.deleteBtn {
+    background: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.deleteBtn:hover {
+    background: #707072;
+}
+
+.deleteBtn img{
+    width: 26px;
+    height: 26px;
+}
+
 .qty {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 20px;
-    padding: 4px;
+    padding: 0 10px;
+}
+
+.qty h4 {
+    font-size: small;
 }
 
 .qty button {
     border: none;
     background: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
