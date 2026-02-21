@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .logo {
     font-size: x-large;
   }
@@ -111,14 +111,6 @@
     width: 100%;
     min-height: 48px;
   }
-
-  /* .name-n-type h3 {
-    font-size: small;
-  }
-
-  .name-n-type p {
-    font-size: smaller;
-  } */
 
   .price {
     width: 100%;

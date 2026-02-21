@@ -1,126 +1,179 @@
 #cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100vh;
+  padding-bottom: 10px;
 }
 
 #cart-items .empty-cart-text {
-    font-family: "Poppins", sans-serif;
-    margin: 0 20px;
+  font-family:
+    "Poppins", sans-serif;
+  margin: 0 20px;
 }
 
 .cart-heading {
-    margin: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
+  margin: 20px;
+  font-family:
+    "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .cart-item {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 10px;
-    font-family: "Poppins", sans-serif;
-    background-color: #f5f5f5;
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  font-family:
+    "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px 160px;
 }
 
 .cart-image-box {
-    display: flex;
-    align-items: center;
-    background-color: #d4d4d4;
+  display: flex;
+  align-items: center;
+  background-color: #d4d4d4;
 }
 
-.cart-item input[type="checkbox"] {
-    accent-color: black;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
+.cart-item
+  input[type="checkbox"] {
+  accent-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
 }
 
 .cart-item img {
-    width: 90px;
-    height: 90px;
+  width: 160px;
+  height: 160px;
 }
 
 .name-to-qty {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .name-n-size {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
 }
 
 .name-n-size h3 {
-    font-size: smaller;
-    font-weight: 600;
+  font-size: x-large;
+  font-weight: 600;
 }
 
 .name-n-size p {
-    font-size: small;
+  font-size: medium;
 }
 
 .price-qty {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .price-qty h4 {
-    font-size: 0.7em;
+  font-size: large;
 }
 
 .qty-deleteBtn {
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .deleteBtn {
-    background: none;
-    border: none;
-    border-radius: 10px;
+  background: none;
+  border: none;
+  border-radius: 10px;
 }
 
 .deleteBtn:hover {
-    background: #707072;
+  background: #707072;
 }
 
-.deleteBtn img{
-    width: 26px;
-    height: 26px;
+.deleteBtn img {
+  width: 26px;
+  height: 26px;
 }
 
 .qty {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 20px;
+  gap: 10px;
+  overflow: hidden;
 }
 
 .qty h4 {
-    font-size: small;
+  font-size: small;
 }
 
 .qty button {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
+  width: 100%;
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .cart-item {
+    padding: 20px;
+  }
+
+  .name-n-size h3 {
+    font-size: smaller;
+    font-weight: 600;
+  }
+
+  .name-n-size p {
+    font-size: small;
+  }
+
+  .name-to-qty {
+    gap: 10px;
+  }
+
+  .cart-item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .price-qty h4 {
+    font-size: 0.7em;
+  }
+
+  .deleteBtn img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .cart-item {
+    padding: 20px 40px;
+  }
+
+  .deleteBtn img {
+    width: 26px;
+    height: 26px;
+  }
 }
